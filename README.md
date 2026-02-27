@@ -116,7 +116,7 @@ cd Table
 mkdir Table TableHeader TableRow TableCell TableFooter
 ```
 
-### 9 Create a Button component
+### Step 9 Create a Button component
 Run the following commands to add the files for the new Button component:
 ```bash
 cd ..
