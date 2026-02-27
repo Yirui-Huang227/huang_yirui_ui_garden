@@ -3,7 +3,13 @@
 This project completes Coding Assignment 12, which requires creating a React UI Component Library with Storybook, testing components, and deploying it via Docker.
 This README documents the step-by-step workflow, including creating project folders, components, tests, Dockerfile, docker-compose.dev.yml, and running the site on localhost:8083.
 
-## Workflow
+# Table of Contents
+1. [Project Initialization](#project-initialization)
+2. [Install and Configure Dependencies](#install-and-configure-dependencies)
+3. [Build Component Library Structure](#build-component-library-structure)
+4. [Project Documentation & Version Control](#project-documentation--version-control)
+
+## Project Initialization
 The following is a step-by-step operation procedure.
 
 ### Step 1: Create React App with TypeScript
@@ -20,6 +26,7 @@ cd huang_yirui_ui_garden
 git init
 ```
 
+## Install and Configure Dependencies
 ### Step 3: Install Storybook
 Copy the following content into WSL2 Terminal
 ```bash
@@ -57,6 +64,7 @@ npm install @testing-library/react jest @types/jest jest-environment-jsdom --sav
 `@types/jest`: TypeScript types for Jest.
 
 `jest-environment-jsdom`: Provides a browser-like environment for testing DOM in Jest.
+
 2. Babel setup for Jest:
 ```bash
 npm install @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-jest --save-dev
@@ -66,11 +74,13 @@ npm install @babel/core @babel/preset-env @babel/preset-react @babel/preset-type
 `@babel/preset-react`: Compile JSX.
 `@babel/preset-typescript`: Compile TypeScript.
 `babel-jest`: Integrates Babel with Jest for compilation.
+
 3. Jest DOM utilities:
 ```bash
 npm install --save-dev @testing-library/jest-dom
 ```
 Adds custom matchers for Jest, e.g., `.toHaveTextContent()` or `.toBeVisible()`.
+
 4. Styled Components testing helpers:
 ```bash
 npm install --save-dev jest-styled-components
@@ -94,6 +104,7 @@ To ensure proper module resolution, especially when using bundlers like Vite or 
 "moduleResolution": "bundler",
 ```
 
+## Build Component Library Structure
 ### Step 8: Create the skeleton structure of the component library
 Run the following commands to set up the project’s component folder structure:
 ```bash
@@ -216,11 +227,10 @@ npm run test
 ```
 The output confirms that Button is visible and that the disabled style works correctly.
 
-### 9 Repeat for Other Components
+### 10 Repeat for Other Components
 Follow the same steps in Step 8 for the Button component to create, document, and test other components in the library.
 
-###
-
+## Dockerize the Project
 ### Step 10: Create Dockerfile
 Create a file named `Dockerfile.prod` in the root directory.
 Open the `Dockerfile.prod` file in VS Code, copy the following content into it, and save it.
@@ -295,6 +305,7 @@ In the WSL2 Terminal, run the following code in the project root directory.
 docker compose -f docker-compose.prod.yml down
 ```
 
+## Project Documentation & Version Control
 ### Step 15: Create README.md
 Create a file named `README.md` in the root directory.
 This document contains information including the project purpose, each step of the operation process, the Dockerfile content, how to run development and production containers, and the Git commit steps.
