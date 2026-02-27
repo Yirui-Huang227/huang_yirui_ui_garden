@@ -227,11 +227,11 @@ npm run test
 ```
 The output confirms that Button is visible and that the disabled style works correctly.
 
-### 10 Repeat for Other Components
+### Step 10: Repeat for Other Components
 Follow the same steps in Step 8 for the Button component to create, document, and test other components in the library.
 
 ## Dockerize the Project
-### Step 10: Create Dockerfile
+### Step 11: Create Dockerfile
 Create a file named `Dockerfile.prod` in the root directory.
 Open the `Dockerfile.prod` file in VS Code, copy the following content into it, and save it.
 ```dockerfile
@@ -261,7 +261,7 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
-### Step 11: Create .dockerignore
+### Step 12: Create .dockerignore
 Create a file named `.dockerignore` in the root directory.
 This file prevents Docker from copying large files, thus reducing the image size.
 Open the `.dockerignore` file in VS Code, copy the following content into it, and save it.
@@ -271,7 +271,7 @@ Open the `.dockerignore` file in VS Code, copy the following content into it, an
 build
 ```
 
-### Step 12: Create docker-compose.dev.yml (dev environments)
+### Step 13: Create docker-compose.dev.yml (dev environments)
 Create a file named `docker-compose.prod.yml` in the root directory.
 Open the `docker-compose.prod.yml` file in VS Code, copy the following content into it, and save it.
 ```yaml
@@ -290,7 +290,7 @@ services:
       - 8083:80
     command: npm start
 ```
-### Step 13: Running development containers
+### Step 14: Running development containers
 1. Ensure Docker Desktop is running.
 2. In the WSL2 Terminal, run the following code in the project root directory.
 ```bash
@@ -299,19 +299,19 @@ docker compose -f docker-compose.prod.yml up
 3. Open your browser and access:
 `http://127.0.0.1:8083`
 
-### Step 14: Stop the container:
+### Step 15: Stop the container:
 In the WSL2 Terminal, run the following code in the project root directory.
 ```bash
 docker compose -f docker-compose.prod.yml down
 ```
 
 ## Project Documentation & Version Control
-### Step 15: Create README.md
+### Step 16: Create README.md
 Create a file named `README.md` in the root directory.
 This document contains information including the project purpose, each step of the operation process, the Dockerfile content, how to run development and production containers, and the Git commit steps.
 Open the `README.md` file in VS Code, write and update all operations from start to finish.
 
-### Step 16: Push to GitHub
+### Step 17: Push to GitHub
 1. Create a new repository on GitHub (do not initialize the README)
 2. Add a remote repository:
 ```bash
