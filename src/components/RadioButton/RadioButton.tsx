@@ -8,11 +8,30 @@ const StyledLabel = styled.label<{ disabled?: boolean }>`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.875rem;
+
+  @media (min-width: 768px) {
+    gap: 0.75rem;
+    font-size: 1rem; /* 16px */
+  }
+
+  @media (min-width: 1200px) {
+    gap: 1rem;
+    font-size: 1.125rem; /* 18px */
+  }
+`;
+
+const StyledInput = styled.input`
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `;
 
 export const RadioButton: React.FC<RadioButtonProps> = ({ label, checked, disabled, onChange }) => (
   <StyledLabel disabled={disabled}>
-    <input type="radio" checked={checked} disabled={disabled} onChange={onChange} />
+    <StyledInput type="radio" checked={checked} disabled={disabled} onChange={onChange} />
     {label}
   </StyledLabel>
 );
