@@ -1,0 +1,24 @@
+# Development environment
+FROM node:24.12.0 as build
+
+WORKDIR /huang_yirui_ui_garden
+
+# Copy package.json and package-lock.json
+COPY package*.json .
+
+# Copy Project File
+COPY . .
+
+# install npm
+RUN npm install
+
+RUN npm run build
+
+FROM nginx:1.25.3
+COPY --from=build /huang_yirui_ui_garden/build /usr/share/nginx/html
+
+# Expose port
+EXPOSE 80
+
+# Start the app
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,37 @@
+import React from "react";
+import styled from "styled-components";
+import { TableCellProps } from "./TableCell.types";
+
+const StyledCell = styled.td<{ disabled?: boolean; backgroundColor?: string; align?: string }>`
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  text-align: ${({ align }) => align || "left"};
+  background-color: ${({ disabled, backgroundColor }) => (disabled ? "#f5f5f5" : backgroundColor || "#ffffff")};
+  color: ${({ disabled }) => (disabled ? "#cccccc" : "#000000")};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "auto")};
+`;
+
+export const TableCell: React.FC<TableCellProps> = ({
+  children,
+  colSpan,
+  rowSpan,
+  align,
+  disabled,
+  backgroundColor,
+  className,
+  style,
+}) => {
+  return (
+    <StyledCell
+      colSpan={colSpan}
+      rowSpan={rowSpan}
+      align={align}
+      disabled={disabled}
+      backgroundColor={backgroundColor}
+      className={className}
+      style={style}
+    >
+      {children}
+    </StyledCell>
+  );
+};
