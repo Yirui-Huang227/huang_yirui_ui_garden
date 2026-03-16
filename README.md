@@ -360,4 +360,7 @@ git add .
 git commit -m "Update  files in match the images used in the test."
 git checkout -b assignment12-revise
 git push origin assignment12-revise
+git add .
+git commit -m "Update  README.md."
+git push origin assignment12-revise
 ```
