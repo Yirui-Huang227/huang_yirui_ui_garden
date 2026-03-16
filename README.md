@@ -343,3 +343,9 @@ git branch -m master main
 ```bash
 git push -u origin main
 ```
+
+6. Save the current version as assignment12-complete branch
+```bash
+git checkout -b assignment12-complete
+git push origin assignment12-complete
+```
