@@ -343,3 +343,21 @@ git branch -m master main
 ```bash
 git push -u origin main
 ```
+
+# Assignment 12: Backup and Revise
+1. Create a new branch `addsinment12-complete` to backup current version for submit
+```bash
+git checkout main
+git pull origin main
+git checkout -b assignment12-complete
+git add .
+git commit -m "Save the current version as assignment12-complete"
+git push origin assignment12-complete
+```
+2. Add some rivese to `app.tsx`, `HeroImage.tests.tsx`, `HeroImage.stories.tsx`, `Img.tests.tsx`, `Img.stories.tsx`
+```bash
+git add .
+git commit -m "Update  files in match the images used in the test."
+git checkout -b assignment12-revise
+git push origin assignment12-revise
+```
