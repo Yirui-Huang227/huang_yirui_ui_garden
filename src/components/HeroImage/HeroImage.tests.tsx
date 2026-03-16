@@ -6,7 +6,7 @@ describe("HeroImage Component", () => {
   test("renders title and subtitle", () => {
     render(
       <HeroImage
-        src="test.jpg"
+        src="https://placehold.co/1920x800/000000/FFF"
         alt="hero"
         title="Hero Title"
         subtitle="Hero Subtitle"
@@ -20,7 +20,7 @@ describe("HeroImage Component", () => {
   test("applies opacity when disabled", () => {
     render(
       <HeroImage
-        src="test.jpg"
+        src="https://placehold.co/1920x800/000000/FFF"
         alt="hero"
         title="Disabled Hero"
         disabled

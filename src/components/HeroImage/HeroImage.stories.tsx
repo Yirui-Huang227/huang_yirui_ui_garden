@@ -16,7 +16,7 @@ type Story = StoryObj<typeof HeroImage>;
 
 export const Default: Story = {
   args: {
-    src: "test.jpg",
+    src: "https://placehold.co/1920x800/000000/FFF",
     alt: "Hero Banner",
     title: "Welcome to UI Garden",
     subtitle: "Build beautiful components",
@@ -26,7 +26,7 @@ export const Default: Story = {
 
 export const Disabled: Story = {
   args: {
-    src: "test.jpg",
+    src: "https://placehold.co/1920x800/000000/FFF",
     alt: "Disabled Hero",
     title: "Disabled Hero",
     subtitle: "Component disabled",
