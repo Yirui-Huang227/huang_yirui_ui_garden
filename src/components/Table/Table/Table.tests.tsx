@@ -1,10 +1,10 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import { Table } from "./Table";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import { Table } from './Table';
 
-describe("Table Component", () => {
-  test("renders table with children", () => {
+describe('Table Component', () => {
+  test('renders table with children', () => {
     render(
       <Table>
         <tbody>
@@ -12,23 +12,25 @@ describe("Table Component", () => {
             <td>Test Cell</td>
           </tr>
         </tbody>
-      </Table>
+      </Table>,
     );
-    expect(screen.getByText("Test Cell")).toBeVisible();
+    expect(screen.getByText('Test Cell')).toBeVisible();
   });
 
-  test("applies disabled styles correctly", () => {
+  test('applies disabled styles correctly', () => {
     const { container } = render(
-      <Table disabled backgroundColor="#ffffff">
+      <Table disabled style={{ backgroundColor: '#ffffff' }}>
         <tbody>
           <tr>
             <td>Disabled Cell</td>
           </tr>
         </tbody>
-      </Table>
+      </Table>,
     );
-    const table = container.querySelector("table");
-    expect(table).toHaveStyleRule("background-color", "#f5f5f5");
-    expect(table).toHaveStyleRule("cursor", "not-allowed");
+
+    const table = container.querySelector('table');
+
+    expect(table).toHaveStyleRule('background-color', '#f5f5f5');
+    expect(table).toHaveStyleRule('cursor', 'not-allowed');
   });
 });
