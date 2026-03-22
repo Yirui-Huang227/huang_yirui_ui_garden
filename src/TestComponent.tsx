@@ -1,9 +1,7 @@
-// intentionally broken code
-const unused = 123; // missing semicolon (Prettier will complain)
-const x = 'hello'; // spacing issues (ESLint will complain)
+const unused = 123;
+const x = 'hello';
 const s = 'hi';
 
 export const TestComponent = () => {
   return <div>Hi</div>;
-  let foo: any;
-}; // missing newline at EOF
+};

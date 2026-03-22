@@ -4,7 +4,7 @@ module.exports = {
     'react-app/jest', // CRA Jest rules for tests
   ],
   rules: {
-    // Your custom rules go here
+    // custom rules
     semi: ['error', 'always'], // enforce semicolons
     quotes: ['error', 'single'], // single quotes
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // allow unused vars starting with _
