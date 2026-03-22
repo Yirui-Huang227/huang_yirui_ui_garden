@@ -1,13 +1,7 @@
-// @ts-nocheck
+// intentionally broken code
+const unused = 123; // missing semicolon (Prettier will complain)
+const x = 'hello'; // spacing issues (ESLint will complain)
 
-import React from 'react';
-
-function TestComponent() {
-  const unused = 42; // ESLint 会提示 no-unused-vars
-  var x = 10; // ESLint 会提示不要用 var
-  console.log('Hello ESLint');
-
-  return <div>Hello ESLint</div>;
-}
-
-export default TestComponent;
+export const TestComponent = () => {
+  return <div>Hi</div>;
+}; // missing newline at EOF
