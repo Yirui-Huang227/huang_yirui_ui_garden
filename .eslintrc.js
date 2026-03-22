@@ -5,6 +5,7 @@ module.exports = {
   ],
   rules: {
     // custom rules
+    semi: ['error', 'always'], // enforce semicolons
     quotes: ['error', 'single'], // single quotes
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // allow unused vars starting with _
     'no-console': ['warn'], // warn on console.log
