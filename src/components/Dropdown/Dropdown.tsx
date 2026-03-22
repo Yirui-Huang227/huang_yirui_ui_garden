@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { DropdownProps } from "./Dropdown.types";
+import React from 'react';
+import styled from 'styled-components';
+import { DropdownProps } from './Dropdown.types';
 
 const StyledSelect = styled.select<{ disabled?: boolean }>`
   padding: 0.5rem;
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-  background-color: ${({ disabled }) => (disabled ? "#cccccc" : "#fff")};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  background-color: ${({ disabled }) => (disabled ? '#cccccc' : '#fff')};
   border: 1px solid #ccc;
   border-radius: 4px;
 
@@ -24,9 +24,18 @@ const StyledSelect = styled.select<{ disabled?: boolean }>`
   }
 `;
 
-export const Dropdown: React.FC<DropdownProps> = ({ options, selected, disabled, onChange }) => (
-  <StyledSelect value={selected} disabled={disabled} onChange={e => onChange?.(e.target.value)}>
-    {options.map(opt => (
+export const Dropdown: React.FC<DropdownProps> = ({
+  options,
+  selected,
+  disabled,
+  onChange,
+}) => (
+  <StyledSelect
+    value={selected}
+    disabled={disabled}
+    onChange={(e) => onChange?.(e.target.value)}
+  >
+    {options.map((opt) => (
       <option key={opt} value={opt}>
         {opt}
       </option>

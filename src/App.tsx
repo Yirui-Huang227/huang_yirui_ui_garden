@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 import {
   Button,
@@ -14,8 +14,8 @@ import {
   TableRow,
   TableFooter,
   TableCell,
-  Text
-} from "./components";
+  Text,
+} from './components';
 
 const Page = styled.div`
   padding: 2rem;
@@ -46,14 +46,12 @@ function App() {
       {/* Hero Image */}
       <Section>
         <Title>Hero Image</Title>
-        <HeroImage
-          src="https://placehold.co/1920x800/000000/FFF"
-          alt="Hero"
-        />
+        <HeroImage src="https://placehold.co/1920x800/000000/FFF" alt="Hero" />
       </Section>
       <Section>
         <Title>Hero Image Disabled</Title>
-        <HeroImage disabled
+        <HeroImage
+          disabled
           src="https://placehold.co/1920x800/000000/FFF"
           alt="Hero"
         />
@@ -83,39 +81,27 @@ function App() {
       <Section>
         <Title>Card</Title>
         <Card title="Card Title" content="This is a simple card component." />
-        <Card
-          title="Disabled Card"
-          content="This card is disabled."
-          disabled
-        />
+        <Card title="Disabled Card" content="This card is disabled." disabled />
       </Section>
 
       {/* Dropdown */}
       <Section>
         <Title>Dropdown</Title>
-        <Dropdown
-          options={["Option 1", "Option 2", "Option 3"]}
-        />
-        <Dropdown
-          options={["Disabled 1", "Disabled 2"]}
-          disabled
-        />
+        <Dropdown options={['Option 1', 'Option 2', 'Option 3']} />
+        <Dropdown options={['Disabled 1', 'Disabled 2']} disabled />
       </Section>
 
       {/* Radio Button */}
       <Section>
         <Title>Radio Button</Title>
-        <RadioButton label="Option A"  />
-        <RadioButton label="Disabled Option"  disabled />
+        <RadioButton label="Option A" />
+        <RadioButton label="Disabled Option" disabled />
       </Section>
 
       {/* Image */}
       <Section>
         <Title>Image</Title>
-        <Img
-          src="https://placehold.co/600x400/000000/FFF"
-          alt="Sample"
-        />
+        <Img src="https://placehold.co/600x400/000000/FFF" alt="Sample" />
         <Img
           src="https://placehold.co/600x400/000000/FFF"
           alt="Disabled"
@@ -126,7 +112,7 @@ function App() {
       {/* Table */}
       <Section>
         <Title>Table</Title>
-        <Table >
+        <Table>
           <TableHeader>
             <TableRow>
               <TableCell>Header 1</TableCell>
@@ -193,4 +179,3 @@ function App() {
 }
 
 export default App;
-

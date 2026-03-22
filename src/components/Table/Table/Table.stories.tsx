@@ -1,12 +1,12 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Table } from "./Table";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Table } from './Table';
 
 const meta: Meta<typeof Table> = {
-  title: "UI/Table/Table",
+  title: 'UI/Table/Table',
   component: Table,
   argTypes: {
-    disabled: { control: "boolean" },
-    backgroundColor: { control: "color" },
+    disabled: { control: 'boolean' },
+    backgroundColor: { control: 'color' },
   },
 };
 
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Table>;
 export const Default: Story = {
   args: {
     disabled: false,
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     children: (
       <tbody>
         <tr>
@@ -35,7 +35,7 @@ export const Default: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     children: (
       <tbody>
         <tr>

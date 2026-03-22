@@ -1,13 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { CardProps } from "./Card.types";
+import React from 'react';
+import styled from 'styled-components';
+import { CardProps } from './Card.types';
 
 const StyledCard = styled.div<{ disabled?: boolean }>`
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: ${({ disabled }) => (disabled ? "#f5f5f5" : "#ffffff")};
-  color: ${({ disabled }) => (disabled ? "#cccccc" : "#000000")};
+  background-color: ${({ disabled }) => (disabled ? '#f5f5f5' : '#ffffff')};
+  color: ${({ disabled }) => (disabled ? '#cccccc' : '#000000')};
   width: 100%;
   box-sizing: border-box;
 

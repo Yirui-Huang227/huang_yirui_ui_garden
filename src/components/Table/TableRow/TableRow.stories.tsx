@@ -1,14 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { TableRow } from "./TableRow";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { TableRow } from './TableRow';
 
 const meta: Meta<typeof TableRow> = {
-  title: "UI/Table/TableRow",
+  title: 'UI/Table/TableRow',
   component: TableRow,
   argTypes: {
-    hover: { control: "boolean" },
-    selected: { control: "boolean" },
-    disabled: { control: "boolean" },
-    children: { control: "text" },
+    hover: { control: 'boolean' },
+    selected: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+    children: { control: 'text' },
   },
 };
 
@@ -20,7 +20,7 @@ export const Default: Story = {
     hover: false,
     selected: false,
     disabled: false,
-    children: "Row Content",
+    children: 'Row Content',
   },
 };
 
@@ -29,6 +29,6 @@ export const Disabled: Story = {
     hover: false,
     selected: false,
     disabled: true,
-    children: "Disabled Row",
+    children: 'Disabled Row',
   },
 };

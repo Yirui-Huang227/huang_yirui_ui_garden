@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import { HeroImageProps } from "./HeroImage.types";
+import React from 'react';
+import styled from 'styled-components';
+import { HeroImageProps } from './HeroImage.types';
 
 const Container = styled.div<{ disabled?: boolean }>`
   position: relative;
@@ -56,7 +56,13 @@ const Subtitle = styled.h3`
   }
 `;
 
-export const HeroImage: React.FC<HeroImageProps> = ({ src, alt, title, subtitle, disabled }) => (
+export const HeroImage: React.FC<HeroImageProps> = ({
+  src,
+  alt,
+  title,
+  subtitle,
+  disabled,
+}) => (
   <Container disabled={disabled}>
     <StyledImg src={src} alt={alt} />
     {title && <Title>{title}</Title>}

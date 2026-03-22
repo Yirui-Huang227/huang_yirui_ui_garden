@@ -1,16 +1,19 @@
-import React from "react";
-import styled from "styled-components";
-import { ButtonProps } from "./Button.types";
+import React from 'react';
+import styled from 'styled-components';
+import { ButtonProps } from './Button.types';
 
-const StyledButton = styled.button<{ disabled?: boolean; backgroundColor?: string }>`
+const StyledButton = styled.button<{
+  disabled?: boolean;
+  backgroundColor?: string;
+}>`
   padding: 0.5rem 1rem;
   font-size: 1rem;
   background-color: ${({ disabled, backgroundColor }) =>
-    disabled ? "#cccccc" : backgroundColor || "#007bff"};
+    disabled ? '#cccccc' : backgroundColor || '#007bff'};
   color: white;
   border: none;
   border-radius: 4px;
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   width: 100%;
 
   &:hover {
@@ -29,8 +32,17 @@ const StyledButton = styled.button<{ disabled?: boolean; backgroundColor?: strin
   }
 `;
 
-export const Button: React.FC<ButtonProps> = ({ label, disabled, backgroundColor, onClick }) => (
-  <StyledButton disabled={disabled} backgroundColor={backgroundColor} onClick={onClick}>
+export const Button: React.FC<ButtonProps> = ({
+  label,
+  disabled,
+  backgroundColor,
+  onClick,
+}) => (
+  <StyledButton
+    disabled={disabled}
+    backgroundColor={backgroundColor}
+    onClick={onClick}
+  >
     {label}
   </StyledButton>
 );

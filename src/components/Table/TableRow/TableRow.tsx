@@ -1,16 +1,21 @@
-import React from "react";
-import styled from "styled-components";
-import { TableRowProps } from "./TableRow.types";
+import React from 'react';
+import styled from 'styled-components';
+import { TableRowProps } from './TableRow.types';
 
-const StyledRow = styled.tr<{ hover?: boolean; selected?: boolean; disabled?: boolean }>`
+const StyledRow = styled.tr<{
+  hover?: boolean;
+  selected?: boolean;
+  disabled?: boolean;
+}>`
   background-color: ${({ selected, disabled }) =>
-    disabled ? "#f5f5f5" : selected ? "#e0f7fa" : "transparent"};
-  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "auto")};
+    disabled ? '#f5f5f5' : selected ? '#e0f7fa' : 'transparent'};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'auto')};
   font-size: 0.875rem; /* 14px */
   line-height: 1.4;
 
   &:hover {
-    background-color: ${({ hover, disabled }) => (hover && !disabled ? "#f1f1f1" : undefined)};
+    background-color: ${({ hover, disabled }) =>
+      hover && !disabled ? '#f1f1f1' : undefined};
   }
 
   td {
@@ -32,9 +37,22 @@ const StyledRow = styled.tr<{ hover?: boolean; selected?: boolean; disabled?: bo
   }
 `;
 
-export const TableRow: React.FC<TableRowProps> = ({ children, hover, selected, disabled, className, style }) => {
+export const TableRow: React.FC<TableRowProps> = ({
+  children,
+  hover,
+  selected,
+  disabled,
+  className,
+  style,
+}) => {
   return (
-    <StyledRow hover={hover} selected={selected} disabled={disabled} className={className} style={style}>
+    <StyledRow
+      hover={hover}
+      selected={selected}
+      disabled={disabled}
+      className={className}
+      style={style}
+    >
       {children}
     </StyledRow>
   );

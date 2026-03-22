@@ -1,13 +1,13 @@
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import { Label } from "./Label";
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import { Label } from './Label';
 
-test("Label is visible", () => {
+test('Label is visible', () => {
   render(<Label text="Test Label" />);
-  expect(screen.getByText("Test Label")).toBeVisible();
+  expect(screen.getByText('Test Label')).toBeVisible();
 });
 
-test("Label color changes when disabled", () => {
+test('Label color changes when disabled', () => {
   render(<Label text="Disabled" disabled />);
-  expect(screen.getByText("Disabled")).toHaveStyle("color: #cccccc");
+  expect(screen.getByText('Disabled')).toHaveStyle('color: #cccccc');
 });

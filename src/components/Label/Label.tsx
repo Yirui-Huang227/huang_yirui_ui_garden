@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { LabelProps } from "./Label.types";
+import React from 'react';
+import styled from 'styled-components';
+import { LabelProps } from './Label.types';
 
 const StyledLabel = styled.span<{ color?: string; disabled?: boolean }>`
-  color: ${({ disabled, color }) => (disabled ? "#cccccc" : color || "#000")};
+  color: ${({ disabled, color }) => (disabled ? '#cccccc' : color || '#000')};
   font-size: 0.875rem;
 
   @media (min-width: 768px) {
